@@ -1,5 +1,4 @@
-<%= form_for @contact do |f| %>
-
+<%= form_for(@contact, url: confirm_path) do |f| %>
   <% if @contact.errors.any? %>
     <div class="alert alert-danger" role="alert">
       <strong>入力内容にエラーがあります</strong>
@@ -10,7 +9,6 @@
       </ul>
     </div>
   <% end %>
-
   <table class="table">
     <tr>
       <th>名前<span class="text-danger">（必須）</span></th>
@@ -27,3 +25,4 @@
   </table>
   <%= f.submit '確認', class: 'btn btn-primary' %>
 <% end %>
+
